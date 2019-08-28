@@ -25,9 +25,22 @@ class _SearchState extends State<Search> {
         ),
       ),
       body: Container(alignment: Alignment.topRight,
-        child: new Text('ابحث عن كتاب او مؤلف او دار نشر او مذيع',
-          style: TextStyle(fontSize: 20,color: Colors.blueGrey),textDirection: TextDirection.rtl,),
+        child: Padding(
+          padding:
+          const EdgeInsets.only(right: 30.0, left: 30.0, bottom: 10.0),
+          child: new TextField(
+            style: TextStyle(color: Colors.white),
+            textAlign: TextAlign.end,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(borderSide: BorderSide.none),
+                hintText: 'ابحث عن كتاب او مؤلف او دار نشر او مذيع',
+                hintStyle: TextStyle(fontSize: 20,color: Colors.blueGrey),
+          ),
+
+
+        ),
       ),
-    );
+    ));
   }
 }
+

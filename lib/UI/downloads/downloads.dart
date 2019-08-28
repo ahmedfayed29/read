@@ -4,6 +4,7 @@ import 'package:read/UI/Subscriptions/help.dart';
 import 'package:read/UI/Subscriptions/join.dart';
 import 'package:read/UI/joins/profile.dart';
 import 'package:read/UI/joins/signcode.dart';
+import 'package:read/UI/joins/signinout.dart';
 import 'package:read/UI/setting/setting.dart';
 
 class Downloads extends StatefulWidget {
@@ -172,6 +173,17 @@ class _DownloadsState extends State<Downloads> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Help()),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    title: Text('سجل الدخول',
+                        textDirection: TextDirection.rtl,
+                        style: TextStyle(fontSize: 18, color: Colors.white)),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignInOut()),
                       );
                     },
                   ),

@@ -6,6 +6,7 @@ import 'package:read/UI/Subscriptions/join.dart';
 import 'package:read/UI/home/searchPage.dart';
 import 'package:read/UI/joins/profile.dart';
 import 'package:read/UI/joins/signcode.dart';
+import 'package:read/UI/joins/signinout.dart';
 import 'package:read/UI/setting/setting.dart';
 import 'package:hidden_drawer_menu/hidden_drawer/hidden_drawer_menu.dart';
 class MainPage extends StatefulWidget {
@@ -291,6 +292,17 @@ class _MainPageState extends State<MainPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => Help()),
+                        );
+                      },
+                    ),
+                    ListTile(
+                      title: Text('سجل الدخول',
+                          textDirection: TextDirection.rtl,
+                          style: TextStyle(fontSize: 18, color: Colors.white)),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignInOut()),
                         );
                       },
                     ),

@@ -4,6 +4,7 @@ import 'package:read/UI/Subscriptions/help.dart';
 import 'package:read/UI/Subscriptions/join.dart';
 import 'package:read/UI/joins/profile.dart';
 import 'package:read/UI/joins/signcode.dart';
+import 'package:read/UI/joins/signinout.dart';
 import 'package:read/UI/setting/setting.dart';
 
 class Home extends StatefulWidget {
@@ -49,11 +50,15 @@ class _HomeState extends State<Home> {
           ),
         ),
     ),
+
       );
   }
 
   Widget specifications() {
     return InkWell(
+      onTap: (){
+        Navigator.of(context).pushNamed('/pagesForSpecialbook');
+      },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
@@ -198,6 +203,17 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Help()),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    title: Text('سجل الدخول',
+                        textDirection: TextDirection.rtl,
+                        style: TextStyle(fontSize: 18, color: Colors.white)),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignInOut()),
                       );
                     },
                   ),
