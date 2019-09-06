@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:read/UI/Open/homepage.dart';
 
+
 class Joins extends StatefulWidget {
   @override
   _JoinsState createState() => _JoinsState();
