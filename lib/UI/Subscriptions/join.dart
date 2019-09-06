@@ -15,6 +15,8 @@ class _JoinsState extends State<Joins> {
   void info() {
     Navigator.of(context).pushNamed('/info');
   }
+  PageController controller;
+
 
   @override
   Widget build(BuildContext context) {
@@ -284,17 +286,23 @@ class _JoinsState extends State<Joins> {
             child: Row(
               textDirection: TextDirection.rtl,
               children: <Widget>[
-                Container(
-                  width: 30,
-                  height: 30,
-                  child: Icon(
-                    Icons.close,
-                    size: 22,
-                    color: Colors.white,
+                InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => HomePage()));
+                  },
+                  child: Container(
+                    width: 30,
+                    height: 30,
+                    child: Icon(
+                      Icons.close,
+                      size: 22,
+                      color: Colors.white,
+                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.blueAccent),
                   ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Colors.blueAccent),
                 ),
                 Expanded(
                     child: Row(
@@ -521,6 +529,7 @@ class _JoinsState extends State<Joins> {
 
     return Scaffold(
       body: PageView(
+
         scrollDirection: Axis.horizontal,
         children: <Widget>[firstPage(), secondPage()],
       ),
