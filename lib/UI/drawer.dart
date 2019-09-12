@@ -16,10 +16,10 @@ class Drawers extends StatefulWidget {
 class _DrawersState extends State<Drawers> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      endDrawer: Theme(
-        data: Theme.of(context).copyWith(canvasColor: Colors.indigoAccent),
-        child:new Drawer(
+    return new Drawer(
+      child:new Drawer(
+          child: Container(
+            color: Colors.deepOrange,
             child: ListView(
               padding: EdgeInsets.zero,
               children: <Widget>[
@@ -141,9 +141,9 @@ class _DrawersState extends State<Drawers> {
                 ),
 
               ],
-            )),
+            ),
+          )),
 
-      ),
 
     );
   }

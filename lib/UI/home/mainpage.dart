@@ -1,9 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:read/UI/home/searchPage.dart';
-
-import 'package:hidden_drawer_menu/hidden_drawer/hidden_drawer_menu.dart';
 
 import '../drawer.dart';
 class MainPage extends StatefulWidget {
@@ -12,7 +9,6 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  List<ScreenHiddenDrawer> items=new List();
 
   Widget page() {
     return Card(
@@ -90,11 +86,9 @@ class _MainPageState extends State<MainPage> {
 
   Widget makes() {
     return InkWell(
-      onTap: (){
+      onTap: () {
         Navigator.of(context).pushNamed('/pagesForSpecialbook');
-
       },
-
       child: Padding(
         padding: const EdgeInsets.all(6.0),
         child: Container(
@@ -110,10 +104,10 @@ class _MainPageState extends State<MainPage> {
                   width: MediaQuery.of(context).size.width / 3,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('images/novel.jpg'),fit: BoxFit.cover
-                      )
-                  ),
-                ),                new Text(
+                          image: AssetImage('images/novel.jpg'),
+                          fit: BoxFit.cover)),
+                ),
+                new Text(
                   'اسم الروايه -',
                   style: TextStyle(fontSize: 15),
                 ),
@@ -131,7 +125,6 @@ class _MainPageState extends State<MainPage> {
 
   Widget main() {
     return Padding(
-
       padding: const EdgeInsets.only(bottom: 12.0),
       child: Container(
         child: Column(
@@ -140,7 +133,7 @@ class _MainPageState extends State<MainPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.of(context).pushNamed('/workauther');
                   },
                   child: Icon(
@@ -177,14 +170,12 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
+        initialIndex: 1,
         length: 2,
         child: new Scaffold(
-
-          endDrawer:Drawers(),
+          endDrawer: Drawers(),
           appBar: AppBar(
             bottom: TabBar(
-
               indicatorColor: Colors.orange,
               unselectedLabelColor: Colors.black,
               labelColor: Colors.grey,
@@ -208,9 +199,9 @@ class _MainPageState extends State<MainPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   InkWell(
-                    onTap: (){
-                      Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (context) => Search()));
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => Search()));
                     },
                     child: Icon(
                       Icons.search,
